@@ -43,7 +43,7 @@ class DataFactory(object):
         elif self.__is_supported_datasets(dataset_config[split]):
             dataset_name = dataset_config[split].lower()
         if dataset_name is not None:
-            return load_dataset("LightChen2333/OpenSLU", dataset_name, split=split)
+            return load_dataset("Rams901/OpenSLU_Clone", split=split)
         else:
             data_file = dataset_config[split]
             data_dict = {"text": [], "slot": [], "intent":[]}

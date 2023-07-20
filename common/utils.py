@@ -5,7 +5,6 @@ import os
 import tarfile
 from typing import List, Tuple
 import zipfile
-from collections import Callable
 from ruamel import yaml
 import requests
 import torch
@@ -385,7 +384,7 @@ def unzip_file(zip_src:str, dst_dir:str):
         print('This is not zip')
 
 
-def find_callable(target: str) -> Callable:
+def find_callable(target: str):
     """ find callable function / class to instantiate
 
     Args:
@@ -463,7 +462,7 @@ def load_yaml(file):
         except yaml.YAMLError as exc:
             raise exc
 
-def from_configured(configure_name_or_file:str, model_class:Callable, config_prefix="./config/", **input_config):
+def from_configured(configure_name_or_file:str, model_class, config_prefix="./config/", **input_config):
     """load module from pre-configured data
 
     Args:

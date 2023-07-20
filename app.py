@@ -17,7 +17,7 @@ from common.utils import str2bool
 parser = argparse.ArgumentParser()
 parser.add_argument('--config_path', '-cp', type=str, default="config/examples/from_pretrained.yaml")
 parser.add_argument('--push_to_public', '-p', type=str2bool, nargs='?',
-                        const=True, default=False,
+                        const=True, default=True,
                         help="Push to public network.")
 args = parser.parse_args()
 config = Config.load_from_yaml(args.config_path)
